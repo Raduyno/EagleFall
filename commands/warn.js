@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
   if (reason.length < 1) return message.reply('You must supply a reason for the warning.');
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
   //client.user.send('You have been warned by: ' + message.author + 'On ' + server + ' Reason: ```' + reason + '```')
-  message.channel.send(message.guild.member(user) + ' has been Warned for the Reason: ```' + reason + '```')
+  message.channel.send(message.guild.member(user) + ' has been Warned for the Reason: *** + reason + ***')
   const embed = new Discord.RichEmbed()
   .setColor(0x00AE86)
   .setTimestamp()
